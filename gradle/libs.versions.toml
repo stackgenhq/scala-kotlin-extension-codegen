@@ -1,0 +1,37 @@
+[versions]
+# plugins
+axionRelease = "1.18.16"
+detekt = "1.23.7"
+kotlin = "2.1.10"
+ktlintGradle = "12.1.2"
+pluginPublish = "1.3.1"
+versionCheck = "0.52.0"
+# libraries
+jUnit = "5.11.4"
+kotest = "5.9.1"
+kotlinLogging = "7.0.4"
+kotlinPoet = "2.0.0"
+logback = "1.5.16"
+scala = "3.6.3"
+scribe = "3.16.0"
+
+[plugins]
+axionRelease = { id = "pl.allegro.tech.build.axion-release", version.ref = "axionRelease"}
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin"}
+ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "ktlintGradle"}
+pluginPublish = { id = "com.gradle.plugin-publish", version.ref = "pluginPublish"}
+versionCheck = { id = "com.github.ben-manes.versions", version.ref = "versionCheck"}
+
+[libraries]
+jUnit = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "jUnit" }
+jUnitPlatformLauncher = { group = "org.junit.platform", name = "junit-platform-launcher" }
+kotestAssertions = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
+kotestRunner = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
+kotlinLogging = { group = "io.github.oshai", name = "kotlin-logging-jvm", version.ref = "kotlinLogging" }
+kotlinPoet = { group = "com.squareup", name = "kotlinpoet", version.ref = "kotlinPoet" }
+kotlinReflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect" }
+logbackClassic = { group = "ch.qos.logback", name = "logback-classic", version.ref = "logback" }
+scalaLibrary = { group = "org.scala-lang", name = "scala3-library_3", version.ref = "scala" }
+# codegen test jars
+scribe = { module = "com.outr:scribe_3", version.ref = "scribe" }

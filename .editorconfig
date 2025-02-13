@@ -1,0 +1,21 @@
+root = true
+
+[*.{kt,kts}]
+ktlint_code_style = intellij_idea
+ktlint_ignore_back_ticked_identifier = false
+
+# names here come from the wrapped functions, so ignore these rules in generated code
+[**/build/generated/**]
+ktlint_standard_filename = disabled
+ktlint_standard_function-naming = disabled
+ktlint_standard_class-naming = disabled
+
+[*]
+charset = utf-8
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*{.yml,yaml}]
+indent_style = space
+indent_size = 2
